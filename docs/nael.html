@@ -13,13 +13,20 @@
         <label for="name">username:</label>
         <input type="text" id="2">
         <h1 id="9"><a href="javascript:;" onclick="A()">Login</a></h1><br>
-        <a href="https://xu.xushi-1009.cc/" >Sign up</a>
+        <a href="https://xu.xushi-1009.cc/" onclick="linkClicked()" >Sign up</a>
 <script>
   function A(){
     let z=localStorage.getItem("xu-io");
 	let y=document.getElementById("2").value.trim();
 	if(y===z){
-		document.getElementById("9").innerHTML="username:"+z+"<a href='/xushi.zip' download>Download xushi 1.0.0</a>";
+		document.getElementById("9").innerHTML="username:"+z+",<a href='/xushi.zip' download>Download xushi 1.0.0</a>,Download:"+i;
+		let g=prompt("setting most Download number");
+		let i=0;
+		while(i<=g){
+			if(linkClicked()){
+				i++;
+			}
+		}
 	}else{
 		alert("cannot login");
 	}
