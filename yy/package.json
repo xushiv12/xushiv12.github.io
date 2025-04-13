@@ -1,0 +1,21 @@
+{
+  "name": "xx-macos-app",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron . --disable-web-security --allow-running-insecure-content",
+    "pack": "electron-builder --mac"
+  },
+  "build": {
+    "appId": "com.xushi.xx",
+    "productName": "徐信系统",
+    "mac": {
+      "icon": "icon.icns",
+      "target": ["dmg"]
+    }
+  },
+  "devDependencies": {
+    "electron": "^29.0.0",
+    "electron-builder": "^24.12.0"
+  }
+}
